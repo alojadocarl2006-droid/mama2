@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Mother's Day 💖</title>
+
+<!-- AESTHETIC FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Parisienne&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Cormorant Garamond', serif;
+
+    /* SOFT BEIGE AESTHETIC */
+    background:linear-gradient(-45deg,
+    #f6eee3,
+    #fdf6f0,
+    #efe3d8,
+    #f8f3ee);
+
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    position:relative;
+}
+
+/* ANIMATED BACKGROUND */
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* FLOATING LIGHTS */
+
+.lights span{
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.7);
+    filter:blur(2px);
+    animation:floatLights linear infinite;
+}
+
+.lights span:nth-child(1){
+    left:10%;
+    animation-duration:8s;
+}
+
+.lights span:nth-child(2){
+    left:25%;
+    animation-duration:12s;
+}
+
+.lights span:nth-child(3){
+    left:40%;
+    animation-duration:9s;
+}
+
+.lights span:nth-child(4){
+    left:60%;
+    animation-duration:11s;
+}
+
+.lights span:nth-child(5){
+    left:75%;
+    animation-duration:10s;
+}
+
+.lights span:nth-child(6){
+    left:90%;
+    animation-duration:13s;
+}
+
+@keyframes floatLights{
+
+    0%{
+        transform:translateY(100vh) scale(0);
+        opacity:0;
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* FLOWERS */
+
+.flowers span{
+    position:absolute;
+    top:-50px;
+    font-size:25px;
+    animation:flowersFall linear infinite;
+    opacity:0.8;
+}
+
+.flowers span:nth-child(1){
+    left:5%;
+    animation-duration:9s;
+}
+
+.flowers span:nth-child(2){
+    left:20%;
+    animation-duration:12s;
+}
+
+.flowers span:nth-child(3){
+    left:40%;
+    animation-duration:10s;
+}
+
+.flowers span:nth-child(4){
+    left:65%;
+    animation-duration:13s;
+}
+
+.flowers span:nth-child(5){
+    left:85%;
+    animation-duration:11s;
+}
+
+@keyframes flowersFall{
+
+    0%{
+        transform:translateY(-100px) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(120vh) rotate(360deg);
+    }
+}
+
+/* MAIN CARD */
+
+.card{
+    width:92%;
+    max-width:1150px;
+    min-height:620px;
+
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(15px);
+
+    border-radius:35px;
+    overflow:hidden;
+
+    display:flex;
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.08),
+    0 0 40px rgba(255,255,255,0.4);
+
+    position:relative;
+
+    animation:cardFloat 5s ease-in-out infinite;
+}
+
+/* FLOAT */
+
+@keyframes cardFloat{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/* IMAGE SIDE */
+
+.left{
+    width:45%;
+    position:relative;
+    overflow:hidden;
+    background:url('yourpicture.jpg') center/cover no-repeat;
+}
+
+/* POLAROID EFFECT */
+
+.left::before{
+    content:'';
+    position:absolute;
+    inset:18px;
+    border:10px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    background:url('yourpicture.jpg') center/cover no-repeat;
+
+    animation:zoomImage 15s ease-in-out infinite;
+}
+
+@keyframes zoomImage{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+}
+
+/* OVERLAY */
+
+.left::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,0.15),
+    rgba(255,255,255,0.05));
+}
+
+/* RIGHT SIDE */
+
+.right{
+    width:55%;
+    padding:70px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    z-index:2;
+}
+
+/* GLOW CIRCLES */
+
+.circle1,
+.circle2{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.2);
+    filter:blur(25px);
+    z-index:0;
+}
+
+.circle1{
+    width:230px;
+    height:230px;
+    top:-70px;
+    right:-70px;
+}
+
+.circle2{
+    width:180px;
+    height:180px;
+    bottom:-40px;
+    left:-40px;
+}
+
+/* TITLE */
+
+.right h1{
+    font-family:'Parisienne', cursive;
+    font-size:5rem;
+    color:#8b6f5c;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.7);
+
+    animation:glow 3s ease infinite;
+
+    position:relative;
+    z-index:2;
+}
+
+/* GLOW */
+
+@keyframes glow{
+
+    0%,100%{
+        text-shadow:0 0 10px rgba(255,255,255,0.6);
+    }
+
+    50%{
+        text-shadow:
+        0 0 20px rgba(255,255,255,1),
+        0 0 35px rgba(255,228,196,0.9);
+    }
+}
+
+/* MESSAGE */
+
+.right p{
+    font-size:1.5rem;
+    line-height:2.2;
+    color:#5e4b3c;
+    letter-spacing:1px;
+
+    position:relative;
+    z-index:2;
+
+    animation:typewriter 5s steps(200);
+}
+
+/* HEART */
+
+.big-heart{
+    margin-top:30px;
+    font-size:70px;
+
+    animation:heartBeat 1s infinite;
+
+    width:fit-content;
+
+    position:relative;
+    z-index:2;
+}
+
+@keyframes heartBeat{
+
+    0%{transform:scale(1);}
+    25%{transform:scale(1.2);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+/* SIGNATURE */
+
+.signature{
+    margin-top:25px;
+    font-size:1.5rem;
+    color:#8b6f5c;
+    font-style:italic;
+    position:relative;
+    z-index:2;
+}
+
+/* DATE */
+
+.date{
+    margin-top:10px;
+    color:#9c8575;
+    font-size:1rem;
+    letter-spacing:2px;
+    position:relative;
+    z-index:2;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+    height:auto;
+    padding:20px;
+}
+
+.card{
+    flex-direction:column;
+    height:auto;
+}
+
+.left{
+    width:100%;
+    height:350px;
+}
+
+.right{
+    width:100%;
+    padding:45px 30px;
+    text-align:center;
+    align-items:center;
+}
+
+.right h1{
+    font-size:3.8rem;
+}
+
+.right p{
+    font-size:1.2rem;
+    line-height:2;
+}
+
+.big-heart{
+    font-size:60px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING LIGHTS -->
+<div class="lights">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- FLOWERS -->
+<div class="flowers">
+    <span>🌸</span>
+    <span>🤍</span>
+    <span>🌷</span>
+    <span>✨</span>
+    <span>💐</span>
+</div>
+
+<!-- CARD -->
+<div class="card">
+
+    <!-- LEFT IMAGE -->
+    <div class="left"></div>
+
+    <!-- RIGHT MESSAGE -->
+    <div class="right">
+
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+
+        <h1>Happy Mother’s Day 💐</h1>
+
+        <p>
+            Ma, happy mother’s day! <br><br>
+
+            Ma enjoy mo lang ung araw na to and pasensya na kung may times na di tayo magkasundo.
+            Mahal na mahal kita sobra! 🤍
+        </p>
+
+        <div class="big-heart">❤️</div>
+
+        <div class="signature">
+            — Love, Carl 💖
+        </div>
+
+        <div class="date">
+            Mother’s Day 2026
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
