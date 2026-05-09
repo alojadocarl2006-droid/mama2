@@ -17,11 +17,15 @@
 }
 
 body{
-    height:100vh;
+    width:100%;
+    min-height:100vh;
+    min-height:100dvh; /* FIX FOR MOBILE BROWSER */
     display:flex;
     justify-content:center;
     align-items:center;
+
     font-family:'Cormorant Garamond', serif;
+
     background:linear-gradient(-45deg,#f6eee3,#fdf6f0,#efe3d8,#f8f3ee);
     background-size:400% 400%;
     animation:bgMove 15s ease infinite;
@@ -34,53 +38,52 @@ body{
     100%{background-position:0% 50%;}
 }
 
-/* 📱 PHONE CARD */
+/* 📱 MOBILE CARD (NO SPLIT) */
 .card{
-    width:92%;
+    width:90%;
     max-width:420px;
-    height:90vh;
-    background:rgba(255,255,255,0.2);
+    height:auto;
+
+    background:rgba(255,255,255,0.22);
     backdrop-filter:blur(15px);
+
     border-radius:30px;
     overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
 
-/* IMAGE TOP */
-.left{
-    height:40%;
-    background:url('yourpicture.jpg') center/cover no-repeat;
-}
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
 
-/* CONTENT BOTTOM */
-.right{
-    height:60%;
-    padding:20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
     text-align:center;
 }
 
-.right h1{
+/* IMAGE TOP FULL WIDTH */
+.image{
+    width:100%;
+    height:280px;
+    background:url('yourpicture.jpg') center/cover no-repeat;
+}
+
+/* CONTENT */
+.content{
+    padding:25px;
+}
+
+h1{
     font-family:'Parisienne', cursive;
-    font-size:2.5rem;
+    font-size:2.6rem;
     color:#8b6f5c;
     margin-bottom:10px;
 }
 
-.right p{
+p{
     font-size:1.05rem;
     line-height:1.8;
     color:#5e4b3c;
 }
 
 /* HEART */
-.big-heart{
-    margin-top:10px;
+.heart{
     font-size:50px;
+    margin-top:15px;
     animation:beat 1s infinite;
 }
 
@@ -89,7 +92,6 @@ body{
     50%{transform:scale(1.2);}
 }
 
-/* SIGNATURE */
 .signature{
     margin-top:10px;
     font-size:1.1rem;
@@ -97,7 +99,7 @@ body{
     font-style:italic;
 }
 
-/* MUSIC HIDDEN */
+/* MUSIC HIDE */
 audio{
     display:none;
 }
@@ -114,9 +116,11 @@ audio{
 
 <div class="card">
 
-    <div class="left"></div>
+    <!-- IMAGE -->
+    <div class="image"></div>
 
-    <div class="right">
+    <!-- TEXT -->
+    <div class="content">
 
         <h1>Happy Mother’s Day 💐</h1>
 
@@ -124,14 +128,14 @@ audio{
             Happy Mother’s Day, Ma 💖 <br><br>
 
             Salamat sa lahat ng sakripisyo, pag-aalaga, at pagmamahal mo sa’kin.  
-            Kahit hindi ko madalas nasasabi, sobrang mahal kita at pinapahalagahan kita.  
+            Kahit hindi ko madalas nasasabi, sobrang mahal at pinapahalagahan kita.  
 
-            Sorry sa mga times na nagkaka-inis tayo, pero ikaw pa rin yung pinaka-importante sa buhay ko.  
+            Sorry kung minsan di tayo nagkakaintindihan, pero lagi kitang pinapahalagahan.  
 
             Gagawin ko yung best ko para maproud ka sa’kin someday. 🤍
         </p>
 
-        <div class="big-heart">❤️</div>
+        <div class="heart">❤️</div>
 
         <div class="signature">
             — Love, Carl 💖
