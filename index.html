@@ -18,67 +18,69 @@
 
 body{
     height:100vh;
-    overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     font-family:'Cormorant Garamond', serif;
-
     background:linear-gradient(-45deg,#f6eee3,#fdf6f0,#efe3d8,#f8f3ee);
     background-size:400% 400%;
     animation:bgMove 15s ease infinite;
 }
 
+/* BACKGROUND ANIMATION */
 @keyframes bgMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* CARD */
+/* 📱 PHONE CARD */
 .card{
     width:92%;
-    max-width:1150px;
-    min-height:620px;
-    background:rgba(255,255,255,0.18);
+    max-width:420px;
+    height:90vh;
+    background:rgba(255,255,255,0.2);
     backdrop-filter:blur(15px);
-    border-radius:35px;
-    display:flex;
+    border-radius:30px;
     overflow:hidden;
-    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
+/* IMAGE TOP */
 .left{
-    width:45%;
+    height:40%;
     background:url('yourpicture.jpg') center/cover no-repeat;
 }
 
+/* CONTENT BOTTOM */
 .right{
-    width:55%;
-    padding:70px 60px;
+    height:60%;
+    padding:20px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    text-align:left;
+    text-align:center;
 }
 
 .right h1{
     font-family:'Parisienne', cursive;
-    font-size:4.5rem;
+    font-size:2.5rem;
     color:#8b6f5c;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 .right p{
-    font-size:1.4rem;
-    line-height:2.2;
+    font-size:1.05rem;
+    line-height:1.8;
     color:#5e4b3c;
 }
 
 /* HEART */
 .big-heart{
-    margin-top:25px;
-    font-size:65px;
+    margin-top:10px;
+    font-size:50px;
     animation:beat 1s infinite;
 }
 
@@ -87,11 +89,17 @@ body{
     50%{transform:scale(1.2);}
 }
 
+/* SIGNATURE */
 .signature{
-    margin-top:20px;
-    font-size:1.3rem;
+    margin-top:10px;
+    font-size:1.1rem;
     color:#8b6f5c;
     font-style:italic;
+}
+
+/* MUSIC HIDDEN */
+audio{
+    display:none;
 }
 
 </style>
@@ -112,16 +120,15 @@ body{
 
         <h1>Happy Mother’s Day 💐</h1>
 
-        <!-- UPDATED MESSAGE -->
         <p>
             Happy Mother’s Day, Ma 💖 <br><br>
 
             Salamat sa lahat ng sakripisyo, pag-aalaga, at pagmamahal mo sa’kin.  
-            Kahit minsan hindi ako expressive, sobra kitang pinapahalagahan at mahal.  
+            Kahit hindi ko madalas nasasabi, sobrang mahal kita at pinapahalagahan kita.  
 
-            Sorry kung may mga pagkakataon na di tayo nagkakaintindihan, pero tandaan mo na lagi kitang pinapahalagahan.  
+            Sorry sa mga times na nagkaka-inis tayo, pero ikaw pa rin yung pinaka-importante sa buhay ko.  
 
-            Gagawin ko yung best ko sa lahat ng bagay para maproud ka sa’kin balang araw. 🤍
+            Gagawin ko yung best ko para maproud ka sa’kin someday. 🤍
         </p>
 
         <div class="big-heart">❤️</div>
